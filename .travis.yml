@@ -1,17 +1,16 @@
 language: go
 go:
-  - 1.11.x
+- 1.11.x
 install:
-  - go get GitHub.com/gohugoio/hugo
+- go get GitHub.com/gohugoio/hugo
 script:
-  - mkdir -p themes/beautifulhugo && git clone https://GitHub.com/
+- mkdir -p themes/beautifulhugo && git clone https://GitHub.com/
 halogenica/beautifulhugo.git themes/beautifulhugo
-  - hugo --theme beautifulhugo
+- hugo --theme beautifulhugo
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  local_dir: public
-  keep_history: true
-  on:
-    branch: master
+provider: pages
+skip_cleanup: true
+GitHub_token: $GITHUB_TOKEN
+local_dir: public
+on:
+branch: master:
